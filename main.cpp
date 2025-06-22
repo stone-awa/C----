@@ -1,14 +1,14 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
+void HanLaoShiZhenShuai(int x){
+    for (int i = 1; i <= x; i++){
+            printf("%s\n","韩老师真帅!");
+    }
+}
+
 int main() {
-    int x, y;
-    cin >> x >> y;
-    x = (x | x << 2) & 0x33;
-    x = (x | x << 1) & 0x55;
-    y = (y | y << 2) & 0x33;
-    y = (y | y << 1) & 0x55;
-    int z = x | y << 1;
-    cout << z << endl;
-    return 0;
+    int y;
+    cin >> y;
+    HanLaoShiZhenShuai(y);
 }
