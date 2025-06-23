@@ -1,14 +1,22 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void HanLaoShiZhenShuai(int x){
-    for (int i = 1; i <= x; i++){
-            printf("%s\n","韩老师真帅!");
+bool is(int x){
+    if (x == 1) return 0;
+    for (int i = 2; i <= pow(x, 0.5); i++){
+        for (int j = 2; j <= x; j++){
+        if (i * j == x) return 0;
     }
+    }
+    return 1;
 }
 
 int main() {
-    int y;
-    cin >> y;
-    HanLaoShiZhenShuai(y);
+    int n;
+    cin >> n;
+    for (int i = 4; i <= n; i++){
+        if (is(i) && is(i - 2)){
+            cout << i - 2 << ' ' << i << endl;
+        }
+    }
 }
