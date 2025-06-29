@@ -1,23 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-bool LY(int x){
-    if ((x % 100) && !(x % 4)){
-        return 1;
-    }
-    else if (!(x % 100) && !(x % 400))
-    {
-        return 1;
-    }
-    return 0;
-}
 
 int main(){
-    int y;
-    cin >> y;
-    if (LY(y)){
-        cout << "YES";
+    int n, s[105][105], c = 1;
+    cin >> n;
+    int t = (n + 1) / 2, q = (n + 1) / 2;
+    for (int i = 1; i <= n*n;i++){
+        s[t][q] = i;
+        c = (c + 2);
+        if ()
     }
-    else{
-        cout << "NO";
+    for (int i = 1; i <= n; i++){
+        for (int j = 1; j <= n; j++){
+            printf("%+8d",s[i][j])
+    }
     }
 }
