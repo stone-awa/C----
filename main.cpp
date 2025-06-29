@@ -15,9 +15,9 @@ int main(){
     int y;
     cin >> y;
     if (LY(y)){
-        printf("%s", "YES")
+        cout << "YES";
     }
     else{
-        printf("%s", "NO")
+        cout << "NO";
     }
 }
