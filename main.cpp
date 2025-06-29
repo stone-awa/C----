@@ -1,22 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-bool is(int x){
-    if (x == 1) return 0;
-    for (int i = 2; i <= pow(x, 0.5); i++){
-        for (int j = 2; j <= x; j++){
-        if (i * j == x) return 0;
+bool LY(int x){
+    if ((x % 100) && !(x % 4)){
+        return 1;
     }
+    else if (!(x % 100) && !(x % 400))
+    {
+        return 1;
     }
-    return 1;
+    return 0;
 }
 
-int main() {
-    int n;
-    cin >> n;
-    for (int i = 4; i <= n; i++){
-        if (is(i) && is(i - 2)){
-            cout << i - 2 << ' ' << i << endl;
-        }
+int main(){
+    int y;
+    cin >> y;
+    if (LY(y)){
+        printf("%s", "YES")
+    }
+    else{
+        printf("%s", "NO")
     }
 }
