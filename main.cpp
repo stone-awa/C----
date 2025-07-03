@@ -1,6 +1,8 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<stdio.h>
 
 int main(){
-    printf("%s","Hello,World!");
+    int n = 1145;
+    long long a;
+    a = static_cast<long long>(n);
+    printf("%d", a);
 }
