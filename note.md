@@ -118,7 +118,7 @@ long double a; // 长双精度
 void func(); // 用于无返回值函数
 ```
 
-### 类型转换
+### 5. 类型转换
 #### 隐式转换
 ```c++
 int i = 10;
@@ -206,7 +206,7 @@ for (int i = 0; i < n; i++) {
 1. 列出2^n倒排列表
 2. 二进制位为1的项相加
 
-#### C++实现
+#### C++实现十进制转二进制
 ```c++
 bitset<位数> 变量名(十进制数); // 位数需为2^n
 ```
@@ -286,7 +286,22 @@ bool isPalindrome(int x) {
     return reversed == original;
 }
 ```
+### 质数检测
+```c++
+bool isPrime(int n) {
+    // 处理特殊情况
+    if (n <= 1) return false;   // 小于等于1的数不是质数
+    if (n == 2) return true;    // 2是唯一的偶数质数
+    if (n % 2 == 0) return false; // 排除其他偶数
 
+    for (int i = 3; i <= n; i += 2) {
+        if (n % i == 0) {
+            return false;
+        }
+    }
+    return true;
+}
+```
 ### 奇偶判断
 ```c++
 if (n % 2 == 0) // 偶数判断
@@ -296,7 +311,6 @@ if (n % 2 != 0) // 奇数判断
 if (!(n % 2)) // 判断偶数
 if (n % 2)    // 判断奇数
 ```
-
 ---
 
 ## 十、流程控制
@@ -369,7 +383,7 @@ goto 标签名;
 ### 7.continue语句
 ```c++
 for (int i = 1; i < 10; i++){
-  continue; //位于循环语句内(for,while,do while),用于跳过此次循环
+  continue; //位于循环语句内(for,while,do while),用于跳过当前循环迭代的剩余部分，直接进入下一次迭代
 }
 ```
 
@@ -378,6 +392,19 @@ for (int i = 1; i < 10; i++){
 for (int i = 1; i < 10; i++){
   break //位于循环语句内(for,while,do while),用于结束循环语句循环
 }
+
+// break语句还用于退出swich语句
+switch (表达式) {
+    case 值1:
+        // 语句1
+        break; // 必须break
+    case 值2:
+        // 语句2
+        break;
+    default:
+        // 默认语句
+}
+
 ```
 ---
 
